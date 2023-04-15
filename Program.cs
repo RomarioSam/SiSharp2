@@ -150,7 +150,7 @@
 // }
 
 int x = new Random().Next(-100000, 100000);
-x = -81;
+x = -8125451;
 int x1 = x;
 while ( x1 > 999 | x1 < -999)
     {
@@ -158,7 +158,7 @@ while ( x1 > 999 | x1 < -999)
     }
 if (x > 100 | x < - 100)
     {
-        Console.WriteLine(x + " --> " + x1%10);
+        Console.WriteLine(x + " --> " + Math.Abs(x1%10));
     }
     else
     {
