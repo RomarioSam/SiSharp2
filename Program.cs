@@ -149,21 +149,21 @@
 //     }
 // }
 
-int x = new Random().Next(-100000, 100000);
-x = -8125451;
-int x1 = x;
-while ( x1 > 999 | x1 < -999)
-    {
-        x1 = x1 / 10;
-    }
-if (x > 100 | x < - 100)
-    {
-        Console.WriteLine(x + " --> " + Math.Abs(x1%10));
-    }
-    else
-    {
-        Console.WriteLine($"Число {x} меньше трехзначного, поэтому третьей цифры нет");
-    }
+// int x = new Random().Next(-100000, 100000);
+// x = -8125451;
+// int x1 = x;
+// while ( x1 > 999 | x1 < -999)
+//     {
+//         x1 = x1 / 10;
+//     }
+// if (x > 100 | x < - 100)
+//     {
+//         Console.WriteLine(x + " --> " + Math.Abs(x1%10));
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Число {x} меньше трехзначного, поэтому третьей цифры нет");
+//     }
 
 
 // Console.Write("Ведите число от 1 до 7, которое указывает номер дня недели: ");
@@ -176,3 +176,85 @@ if (x > 100 | x < - 100)
 // {
 //     Console.WriteLine("выходной");
 // }
+
+// цикл форыч ин
+// string [] masik = new string[3] { "1","2","6"};
+// foreach (string i in masik)
+// {
+//     Console.Write(i + "__\n");
+// }
+
+//расстояние между тремя(сначала было с двумя) точками координат
+// int x1 = new Random().Next(-100, 100);
+// int x2 = new Random().Next(-100, 100);
+// int y1 = new Random().Next(-100, 100);
+// int y2 = new Random().Next(-100, 100);
+// int z1 = new Random().Next(-100, 100);
+// int z2 = new Random().Next(-100, 100);
+// // x1 =3;
+// // x2 = -5;
+// // y1 = 1;
+// // y2 = -5;
+// // z1 = -12;
+// // z2 = 12;
+// Console.WriteLine(x1 + "    "+ y1 + "    " + z1 + "\n" + x2 + "    "+ y2 + "    " + z2);
+// int x3 = x1 -x2;
+// int y3 = y1 - y2;
+// int z3 = z1 -z2;
+// double v = Math.Sqrt(Math.Pow(x3,2) + Math.Pow(y3,2));
+// double q = Math.Sqrt(Math.Pow(z3,2) + Math.Pow(v,2));
+// Console.WriteLine(Math.Floor(q));
+
+// выводим " таблицу " кубoв из чисел от 1 до N
+// Console.Write("ВВедите число (желательно небольшое, до 20) : ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// int i = 1;
+// while ( i <= N)
+// {
+//     Console.Write(Math.Pow(i,3) + "___");
+//     i++;
+// }
+
+// полиндром через строку!!! С учетом отрицательного числа!!! С независимым количеством цифр!!! Но не сработает со строкой в начале которой стоит "-"
+// Console.Write("ВВедите число: ");
+// string x = Console.ReadLine();
+// string n = "-";
+// string x1 = x;
+// if (n[0] == x[0])
+//     { x1 = x1.Remove(0,1);}
+// int l = x1.Length - 1;
+// int i = 0;
+// while (i < l )
+// {
+//     if (x1[i] == x1[l])
+//     {
+//         Console.WriteLine(x1[i] + "__" + x1[l]);
+//         i++;
+//         l--;
+//     }
+//     else
+//     {
+//     Console.WriteLine($"Число {x} не является полиндромом.");
+//     break;
+//     };
+// };
+// if (l - i < 2) Console.WriteLine($"Число {x} - полиндром!))"); 
+
+// полиндром для 5-значного числа
+Console.Write("ВВедите пятизначное число: ");
+int x = Convert.ToInt32(Console.ReadLine());
+int x1 = Math.Abs(x);
+int a1 = x1/10000;
+int a2 = (x1/1000)%10;
+int a3 = (x1/100)%10;
+int a4 = (x1/10)%10;
+int a5 = x1%10;
+Console.WriteLine(a1+ "__"+a2+"__"+a3+"__"+a4+"__"+a5);
+if (a1 == a5 && a2 == a4)
+{
+    Console.WriteLine("Число "+ x + " полиндром!!!!!!УУУУУУРРРААААА");
+}
+else
+{
+    Console.WriteLine("Число "+ x + " не полиндром.");
+}
