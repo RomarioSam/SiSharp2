@@ -277,16 +277,14 @@
 // возведение в степень одного в другое
 // Console.Write("Напишите два числа через пробел. Первое будем возводить в степень, равную второму числу: ");
 // string x = Console.ReadLine();
-// int[] y = x.Split(" ").Select(Int32.Parse).ToArray();  // ну или в двух строчках мы делаем каждую строку числом. Здесь используется метод Select, который ее непонятно как работает
+// int[] y = x.Split(" ").Select(Int32.Parse).ToArray();  // ну или в двух строчках мы делаем каждую строку числом. Здесь используется метод Select, который непонятно как работает
 // Console.WriteLine(y[0] + " в " + y[1] + " степени = "+ Math.Pow(y[0],y[1]));
 
-// string [] cars = { "Nissan", "Aston Martin", "Chevrolet", "Alfa Romeo", "Chrysler", "Dodge", "BMW",
-//                             "Ferrari", "Audi", "Bentley", "Ford", "Lexus", "Mercedes", "Toyota", "Volvo", "Subaru", "Жигули :)"};
-
-// var carObj = cars.Select(p => new { LastNa = p, Length = p.Length });
-
-// foreach (var i in carObj)
-//         Console.WriteLine("Автомобиль {0} имеет длину {1} символов", i.LastNa, i.Length);
+                                                   // string [] cars = { "Nissan", "Aston Martin", "Chevrolet", "Alfa Romeo", "Chrysler", "Dodge", "BMW",
+                                                   //                             "Ferrari", "Audi", "Bentley", "Ford", "Lexus", "Mercedes", "Toyota", "Volvo", "Subaru", "Жигули :)"};
+  // это я разбирался что такое .Select                                                 // var carObj = cars.Select(p => new { LastNa = p, Length = p.Length });
+                                                   // foreach (var i in carObj)
+                                                   //         Console.WriteLine("Автомобиль {0} имеет длину {1} символов", i.LastNa, i.Length);
 
 // сумма цифр числа
 // Console.Write("Введите число: ");
