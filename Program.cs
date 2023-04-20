@@ -241,20 +241,85 @@
 // if (l - i < 2) Console.WriteLine($"Число {x} - полиндром!))"); 
 
 // полиндром для 5-значного числа
-Console.Write("ВВедите пятизначное число: ");
-int x = Convert.ToInt32(Console.ReadLine());
-int x1 = Math.Abs(x);
-int a1 = x1/10000;
-int a2 = (x1/1000)%10;
-int a3 = (x1/100)%10;
-int a4 = (x1/10)%10;
-int a5 = x1%10;
-Console.WriteLine(a1+ "__"+a2+"__"+a3+"__"+a4+"__"+a5);
-if (a1 == a5 && a2 == a4)
+// Console.Write("ВВедите пятизначное число: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// int x1 = Math.Abs(x);
+// int a1 = x1/10000;
+// int a2 = (x1/1000)%10;
+// int a3 = (x1/100)%10;
+// int a4 = (x1/10)%10;
+// int a5 = x1%10;
+// Console.WriteLine(a1+ "__"+a2+"__"+a3+"__"+a4+"__"+a5);
+// if (a1 == a5 && a2 == a4)
+// {
+//     Console.WriteLine("Число "+ x + " полиндром!!!!!!УУУУУУРРРААААА");
+// }
+// else
+// {
+//     Console.WriteLine("Число "+ x + " не полиндром.");
+// }
+
+// сортировка массива без функций
+// int [] x = { 1,3,2,4,1,3};
+// int i = 0;
+// while ( i < x.Length )
+// {
+//    int a = i;
+//    while ( a < x.Length )
+//     {
+//        if (x[i] > x[a]) {int n = x[i]; x[i] = x[a]; x[a] = n;};
+//        a++;
+//      };
+// Console.Write(x[i]+ "  ");
+// i++;
+//  };
+
+// возведение в степень одного в другое
+// Console.Write("Напишите два числа через пробел. Первое будем возводить в степень, равную второму числу: ");
+// string x = Console.ReadLine();
+// int[] y = x.Split(" ").Select(Int32.Parse).ToArray();  // ну или в двух строчках мы делаем каждую строку числом. Здесь используется метод Select, который ее непонятно как работает
+// Console.WriteLine(y[0] + " в " + y[1] + " степени = "+ Math.Pow(y[0],y[1]));
+
+// string [] cars = { "Nissan", "Aston Martin", "Chevrolet", "Alfa Romeo", "Chrysler", "Dodge", "BMW",
+//                             "Ferrari", "Audi", "Bentley", "Ford", "Lexus", "Mercedes", "Toyota", "Volvo", "Subaru", "Жигули :)"};
+
+// var carObj = cars.Select(p => new { LastNa = p, Length = p.Length });
+
+// foreach (var i in carObj)
+//         Console.WriteLine("Автомобиль {0} имеет длину {1} символов", i.LastNa, i.Length);
+
+// сумма цифр числа
+// Console.Write("Введите число: ");
+// string x = Console.ReadLine();
+// string x1 = x;
+// int sum = 0;
+// string n ="-";
+// if (x[0] == n[0])
+//     x = x.Remove(0,1);  
+// int [] y = new int[x.Length];
+// for (int i = 0; i<y.Length; i++) {
+//    y[i] = Convert.ToInt32(x[i].ToString()); // жуть просто. единица становилась 49 потомучто у нас тип char каждого элемента строки. и поэтому мы переделываем .ToString, что бы ASCII перевел все правильно
+//    sum = sum + y[i];
+//    Console.WriteLine(y[i]+ " " + sum);
+//                   };
+// Console.WriteLine($"Сумма цифр в числе {x1} равна {sum}");
+
+// делаем из указанного количества чисел массив... пользуясь функциями
+void PrintNashArray(int Length)     // поставил точку с запятой в конце этой строчки. 2 часа коту под хвост. 
 {
-    Console.WriteLine("Число "+ x + " полиндром!!!!!!УУУУУУРРРААААА");
-}
-else
-{
-    Console.WriteLine("Число "+ x + " не полиндром.");
-}
+   string massiv = "";
+for (int i = 0; i < Length; i++ )
+   {
+   string x = new Random().Next(10, 100).ToString();        
+   massiv = massiv + x + ", ";
+   };
+Console.WriteLine("[ "+ massiv + "]");
+};
+Console.Write("Введите количество чисел в массиве: ");
+int L = Convert.ToInt32(Console.ReadLine());
+PrintNashArray(L);
+
+
+
+
+
