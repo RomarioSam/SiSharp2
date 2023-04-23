@@ -317,8 +317,10 @@
 // int L = Convert.ToInt32(Console.ReadLine());
 // PrintNashArray(L);
 
-int [] funkDlyaZapolneniyaMassiva(string x)   // если мы выводим массив из функции, то перед именем указать надо тип данных и СКОБОЧКИ!
-   {     
+int [] funkDlyaZapolneniyaMassiva()   // если мы выводим массив из функции, то перед именем указать надо тип данных и СКОБОЧКИ!
+   {  
+      Console.WriteLine("Укажите через пробел сначала начальное число массива, потом конечное число, а потом длину массива");
+      string x = Console.ReadLine();   
       int[] y = x.Split(" ").Select(Int32.Parse).ToArray();
       int [] massiv = new int[y[2]];
       Console.Write("Вот ваш массив:  [");
@@ -331,8 +333,8 @@ int [] funkDlyaZapolneniyaMassiva(string x)   // если мы выводим м
       Console.WriteLine("]");
       return massiv;
    };
-Console.WriteLine("Укажите через пробел сначала начальное число массива, потом конечное число, а потом длину массива");
-int [] mass = funkDlyaZapolneniyaMassiva(Console.ReadLine());
+
+int [] mass = funkDlyaZapolneniyaMassiva();
 
 // // теперь уже отдельное задание. Найти количество четных чисел в массиве
 // int count = 0;
@@ -343,21 +345,21 @@ int [] mass = funkDlyaZapolneniyaMassiva(Console.ReadLine());
 //    };
 // Console.WriteLine("Количество четных чисел в массиве: " + count);
 
-// находим сумму чисел в массиве, которые стоят на нечетных позициях
+// //находим сумму чисел в массиве, которые стоят на нечетных позициях
 // int summa = 0;
 // for (int i = 0 ; i < mass.Length; i = i + 2)                     // на нечетных позициях. если с нечетным индексом, то i  меняем на 1
 // summa = summa + mass[i];
 // Console.WriteLine("Сумма чисел на нечетных позициях равна: " + summa);
 
-// находим разницу между минимальным и максимальным
-// int min = mass[0];
-// int max = mass[0];
-// for (int i = 1; i< mass.Length; i++)
-// {
-//    if ( mass[i] > max) max = mass[i];
-//    if ( mass[i] < min) min = mass[i];
-// };
-// Console.WriteLine("Разница между максимальным и минимальным равна: " + (max - min));
+//находим разницу между минимальным и максимальным
+int min = mass[0];
+int max = mass[0];
+for (int i = 1; i< mass.Length; i++)
+{
+   if ( mass[i] > max) max = mass[i];
+   if ( mass[i] < min) min = mass[i];
+};
+Console.WriteLine("Разница между максимальным и минимальным равна: " + (max - min));
 
 
 
