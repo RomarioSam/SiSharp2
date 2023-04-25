@@ -21,4 +21,6 @@ Console.WriteLine($"Точка пересечения прямых y = {intmass[
 
 
 
+
+
                   
