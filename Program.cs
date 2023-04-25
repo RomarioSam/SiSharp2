@@ -77,7 +77,7 @@
 //     {
 //         naborchik[i] = new Random().Next(5,20);
 //         i++;
-//     }; 
+//     };
 // }
 // void Printik(int[] nabor)
 // {
@@ -122,7 +122,7 @@
 
 // Нахождение третьей цифры в числе. Второй цикл можно было заменить Math.Pow(), но тогда переменной х2 нужен тип double(почему-то...)
 // Здесь я искал количество цифр, потом находил число из первых трех цифр, а потом уже находил третью цифру
-// Скажу чесно, узнал у одногруппника, что можно было и не находить количество цифр, а остановиться, когда число будет меньше 999. 
+// Скажу чесно, узнал у одногруппника, что можно было и не находить количество цифр, а остановиться, когда число будет меньше 999.
 //  for (int i = 0; i < 5; i++)
 //  {
 //     int x = new Random().Next(-100000, 100000);
@@ -136,7 +136,7 @@
 //     }
 //     while (a > 3)
 //     {
-//         a--;            
+//         a--;
 //         x2 = x2/10;
 //     }
 //     if (x > 100 | x < - 100)
@@ -238,7 +238,7 @@
 //     break;
 //     };
 // };
-// if (l - i < 2) Console.WriteLine($"Число {x} - полиндром!))"); 
+// if (l - i < 2) Console.WriteLine($"Число {x} - полиндром!))");
 
 // полиндром для 5-значного числа
 // Console.Write("ВВедите пятизначное число: ");
@@ -280,11 +280,11 @@
 // int[] y = x.Split(" ").Select(Int32.Parse).ToArray();  // ну или в двух строчках мы делаем каждую строку числом. Здесь используется метод Select, который непонятно как работает
 // Console.WriteLine(y[0] + " в " + y[1] + " степени = "+ Math.Pow(y[0],y[1]));
 
-                                                   // string [] cars = { "Nissan", "Aston Martin", "Chevrolet", "Alfa Romeo", "Chrysler", "Dodge", "BMW",
-                                                   //                             "Ferrari", "Audi", "Bentley", "Ford", "Lexus", "Mercedes", "Toyota", "Volvo", "Subaru", "Жигули :)"};
-  // это я разбирался что такое .Select                                                 // var carObj = cars.Select(p => new { LastNa = p, Length = p.Length });
-                                                   // foreach (var i in carObj)
-                                                   //         Console.WriteLine("Автомобиль {0} имеет длину {1} символов", i.LastNa, i.Length);
+// string [] cars = { "Nissan", "Aston Martin", "Chevrolet", "Alfa Romeo", "Chrysler", "Dodge", "BMW",
+//                             "Ferrari", "Audi", "Bentley", "Ford", "Lexus", "Mercedes", "Toyota", "Volvo", "Subaru", "Жигули :)"};
+// это я разбирался что такое .Select                                                 // var carObj = cars.Select(p => new { LastNa = p, Length = p.Length });
+// foreach (var i in carObj)
+//         Console.WriteLine("Автомобиль {0} имеет длину {1} символов", i.LastNa, i.Length);
 
 // сумма цифр числа
 // Console.Write("Введите число: ");
@@ -293,7 +293,7 @@
 // int sum = 0;
 // string n ="-";
 // if (x[0] == n[0])
-//     x = x.Remove(0,1);  
+//     x = x.Remove(0,1);
 // int [] y = new int[x.Length];
 // for (int i = 0; i<y.Length; i++) {
 //    y[i] = Convert.ToInt32(x[i].ToString()); // жуть просто. единица становилась 49 потомучто у нас тип char каждого элемента строки. и поэтому мы переделываем .ToString, что бы ASCII перевел все правильно
@@ -303,12 +303,12 @@
 // Console.WriteLine($"Сумма цифр в числе {x1} равна {sum}");
 
 // делаем из указанного количества чисел массив... пользуясь функциями
-// void PrintNashArray(int Length)     // поставил точку с запятой в конце этой строчки. 2 часа коту под хвост. 
+// void PrintNashArray(int Length)     // поставил точку с запятой в конце этой строчки. 2 часа коту под хвост.
 // {
 //    string massiv = "";
 // for (int i = 0; i < Length; i++ )
 //    {
-//    string x = new Random().Next(10, 100).ToString();        
+//    string x = new Random().Next(10, 100).ToString();
 //    massiv = massiv + x + ", ";
 //    };
 // Console.WriteLine("[ "+ massiv + "]");
@@ -317,24 +317,24 @@
 // int L = Convert.ToInt32(Console.ReadLine());
 // PrintNashArray(L);
 
-int [] funkDlyaZapolneniyaMassiva()   // если мы выводим массив из функции, то перед именем указать надо тип данных и СКОБОЧКИ!
-   {  
-      Console.WriteLine("Укажите через пробел сначала начальное число массива, потом конечное число, а потом длину массива");
-      string x = Console.ReadLine();   
-      int[] y = x.Split(" ").Select(Int32.Parse).ToArray();
-      int [] massiv = new int[y[2]];
-      Console.Write("Вот ваш массив:  [");
-      for(int i = 0 ; i < y[2] ; i++)
-      {
-      int n = new Random().Next(y[0], y[1]);
-      massiv[i] = n; 
-      Console.Write( massiv[i] + "__");
-      };
-      Console.WriteLine("]");
-      return massiv;
-   };
+// int [] funkDlyaZapolneniyaMassiva()   // если мы выводим массив из функции, то перед именем указать надо тип данных и СКОБОЧКИ!
+//    {
+//       Console.WriteLine("Укажите через пробел сначала начальное число массива, потом конечное число, а потом длину массива");
+//       string x = Console.ReadLine();
+//       int[] y = x.Split(" ").Select(Int32.Parse).ToArray();
+//       int [] massiv = new int[y[2]];
+//       Console.Write("Вот ваш массив:  [");
+//       for(int i = 0 ; i < y[2] ; i++)
+//       {
+//       int n = new Random().Next(y[0], y[1]);
+//       massiv[i] = n;
+//       Console.Write( massiv[i] + "__");
+//       };
+//       Console.WriteLine("]");
+//       return massiv;
+//    };
 
-int [] mass = funkDlyaZapolneniyaMassiva();
+// int [] mass = funkDlyaZapolneniyaMassiva();
 
 // // теперь уже отдельное задание. Найти количество четных чисел в массиве
 // int count = 0;
@@ -352,21 +352,25 @@ int [] mass = funkDlyaZapolneniyaMassiva();
 // Console.WriteLine("Сумма чисел на нечетных позициях равна: " + summa);
 
 //находим разницу между минимальным и максимальным
-int min = mass[0];
-int max = mass[0];
-for (int i = 1; i< mass.Length; i++)
-{
-   if ( mass[i] > max) max = mass[i];
-   if ( mass[i] < min) min = mass[i];
-};
-Console.WriteLine("Разница между максимальным и минимальным равна: " + (max - min));
+// int min = mass[0];
+// int max = mass[0];
+// for (int i = 1; i< mass.Length; i++)
+// {
+//    if ( mass[i] > max) max = mass[i];
+//    if ( mass[i] < min) min = mass[i];
+// };
+// Console.WriteLine("Разница между максимальным и минимальным равна: " + (max - min));
 
 
+// Console.Write("Введите число: ");
+// int x = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-
-
-
-
+// int[] massiv = new int[x];
+// massiv[0] = 0;
+// massiv[1] = 1;
+// for (int i = 2; i < x; i++)
+// {
+//     massiv[i] = massiv[i - 1] + massiv[i - 2];
+// }
+// foreach (int i in massiv)
+//     Console.Write(i + "__");
