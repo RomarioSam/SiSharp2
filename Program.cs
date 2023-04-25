@@ -1,4 +1,3 @@
-﻿// ДЗ к 6 семинару
 
 // Console.Write("Введите через пробел несколько целых чисел: ");
 // string x = Console.ReadLine();
@@ -18,7 +17,3 @@ double y = intmass[1] * x + intmass[0];
 Console.WriteLine($"Точка пересечения прямых y = {intmass[1]}*x + {intmass[0]} и y = " +
                   $"{intmass[3]}*x + {intmass[2]} равна: \n {x} по Х оси \n {y} по Y оси");
 
-
-
-
-                  
