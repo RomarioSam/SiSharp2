@@ -8,7 +8,10 @@
 //     if (i > 0)
 //         count++;
 // Console.WriteLine("Количество положительных чисел в вашем вводе = " + count);
+    
 
+
+    
 Console.Write("Введите через пробел b1 k1 b2 k2 : ");
 string mass = Console.ReadLine();
 int[] intmass = mass.Split(" ").Select(Int32.Parse).ToArray();
