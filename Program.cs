@@ -19,4 +19,6 @@ Console.WriteLine($"Точка пересечения прямых y = {intmass[
                   $"{intmass[3]}*x + {intmass[2]} равна: \n {x} по Х оси \n {y} по Y оси");
 
 
+
+
                   
