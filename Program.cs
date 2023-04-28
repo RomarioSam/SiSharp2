@@ -63,16 +63,16 @@ return (arr);
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-double [,] matrix = (RazmerTablici());
-for (int i = 0; i < matrix.GetLength(0); i++)
-{
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
-        matrix[i, j] = Math.Round(new Random().NextDouble() * new Random().Next(-50 , 50), 2);
-        Console.Write(matrix[i,j] + " ");
-    }
-    Console.WriteLine();
-}
+// double [,] matrix = (RazmerTablici());
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         matrix[i, j] = Math.Round(new Random().NextDouble() * new Random().Next(-50 , 50), 2);
+//         Console.Write(matrix[i,j] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
 
 // Задача 50. Напишите программу, которая на вход принимает позиции
@@ -88,7 +88,7 @@ Console.Write("Введите число, которое хотите найти
 int k = Convert.ToInt32(Console.ReadLine());
 double [,] matrica = (RazmerTablici());
 int xx = 0;
-string [] massivVivodov = new string[5];     // здесь я указываю с запасом, мало ли у меня число попадется более 4 раз... Не знаю пока что, как положить в конец массива новое значение.
+string [] massivVivodov = {};
 for (int i = 0; i < matrica.GetLength(0); i++)
 {
     for (int j = 0; j < matrica.GetLength(1); j++)
@@ -97,6 +97,7 @@ for (int i = 0; i < matrica.GetLength(0); i++)
         Console.Write(matrica[i,j] + " ");
         if (matrica[i,j] == k) 
         {
+            Array.Resize(ref massivVivodov, massivVivodov.Length + 1);
             massivVivodov[xx] = $"Число {k} есть в таблице в {i + 1} строке, в {j + 1} столбце";
             xx++;
         }
@@ -122,20 +123,20 @@ else
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-double [,] matrica3 = (RazmerTablici());
-double [] sum = new double[matrica3.GetLength(1)];
-for (int i = 0; i < matrica3.GetLength(0); i++)
-{
-    for (int j = 0; j < matrica3.GetLength(1); j++)
-    {
-        matrica3[i,j] = new Random().Next(10 , 100); 
-        sum[j] = sum[j] + matrica3[i,j];
-        Console.Write(matrica3[i,j] + " ");
-    }
-Console.WriteLine();
-}
-for (int i = 0; i < sum.Length; i++)
-{
-    Console.WriteLine($"Среднее арифметическое {i + 1} столбца = " 
-                        + Math.Round(sum[i]/matrica3.GetLength(0), 2));
-}
+// double [,] matrica3 = (RazmerTablici());
+// double [] sum = new double[matrica3.GetLength(1)];
+// for (int i = 0; i < matrica3.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrica3.GetLength(1); j++)
+//     {
+//         matrica3[i,j] = new Random().Next(10 , 100); 
+//         sum[j] = sum[j] + matrica3[i,j];
+//         Console.Write(matrica3[i,j] + " ");
+//     }
+// Console.WriteLine();
+// }
+// for (int i = 0; i < sum.Length; i++)
+// {
+//     Console.WriteLine($"Среднее арифметическое {i + 1} столбца = " 
+//                         + Math.Round(sum[i]/matrica3.GetLength(0), 2));
+// }
