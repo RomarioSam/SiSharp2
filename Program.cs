@@ -245,3 +245,4 @@ for (int x = 0; x < matrix6.GetLength(0); x++)
     }
     Console.WriteLine();
 }
+
