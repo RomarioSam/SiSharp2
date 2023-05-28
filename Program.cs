@@ -35,3 +35,22 @@ int summa(int x, int y)
     return x + summa(x + 1, y);
 }
 Console.WriteLine(summa(n,m));
+
+
+// Напишите программу вычисления функции Аккермана с помощью рекурсии. 
+// Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+Console.Write("Введите значение N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите значение M: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+int akker(int n, int m)
+{
+    if ( n == 0) return m + 1;
+    if ((n != 0) && (m == 0)) return akker(n - 1, 1);
+    else return akker(n - 1, akker(n, m - 1));
+}
+Console.WriteLine(akker(n,m));
